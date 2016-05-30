@@ -1,0 +1,4 @@
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\HumanResourcesDepartment.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\HumanResourcesDepartment.pdb
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Release\HumanResourcesDepartment.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Release\HumanResourcesDepartment.pdb
