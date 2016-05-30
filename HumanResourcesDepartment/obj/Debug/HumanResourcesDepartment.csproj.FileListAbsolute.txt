@@ -1,5 +1,4 @@
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\HumanResourcesDepartment.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\HumanResourcesDepartment.pdb
-E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.csprojResolveAssemblyReference.cache
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.pdb
