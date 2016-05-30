@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HumanResourcesDepartment
 {
@@ -95,12 +92,7 @@ namespace HumanResourcesDepartment
             else
             {
                 Console.WriteLine(this.FirstName + "\t" + this.LastName + "\t" + this.Position + "\t" + " " + "\t" + " ");
-            }
-            
+            }            
         }
-
-
-    }
-
-   
+    }   
 }
