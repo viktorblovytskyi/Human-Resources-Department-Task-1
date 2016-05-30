@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace HumanResourcesDepartment
 {
-    /// <summary>
-    /// 
-    /// </summary>
     sealed public class Subdivision
     {
+
         public string Name { get; set; }
         public List<Employee> Employees { get; }
 

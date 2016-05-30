@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace HumanResourcesDepartment
 {
-  
-    /// <summary>
-    /// 
-    /// </summary>
     sealed public class Employee: Person
     {
+
         private Employee Employer { get; set; }
         private string Position { get; set; }
         private Subdivision Subdivision { get; set; }
 
         /// <summary>
-        /// 
+        /// Initial constructor
         /// </summary>
         /// <param name="FirstName">Firstname of employee. Type: string. </param>
         /// <param name="LastName">Lastname of employee. Type: string. </param>
@@ -35,19 +32,30 @@ namespace HumanResourcesDepartment
         /// <summary>
         /// This method set subdivision in class employee.
         /// </summary>
-        /// <param name="sd">Subdivision</param>
+        /// <param name="sd">Subdivision object</param>
         public void SetSubdivision(Subdivision sd)
         {
             this.Subdivision = sd;
         }
 
         /// <summary>
-        /// 
+        /// This method sets employer.
         /// </summary>
-        /// <param name="emp"></param>
+        /// <param name="emp">Employee object</param>
         public void SetEmployer(Employee emp)
         {
             this.Employer = emp;
+        }
+
+        /// <summary>
+        /// This method changes employee's subdivision.
+        /// </summary>
+        /// <param name="oldSubdivision">Old subdivision object</param>
+        /// <param name="newSubdivision">New subdivision object</param>
+        public void ChangeSubdivision(Subdivision newSubdivision)
+        {
+            this.Subdivision.RemoveEmployee(this);
+            newSubdivision.AddEmployee(this);
         }
 
         /// <summary>
@@ -69,6 +77,7 @@ namespace HumanResourcesDepartment
             }
             
         }
+
 
     }
 
