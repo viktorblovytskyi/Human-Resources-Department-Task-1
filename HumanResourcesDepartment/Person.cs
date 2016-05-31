@@ -16,6 +16,7 @@
         /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
         public Person(int id, string FirstName, string LastName, string ContactDetails)
         {
+            this.id = id;
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.ContactDetails = ContactDetails;
