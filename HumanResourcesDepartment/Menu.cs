@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace HumanResourcesDepartment
 {
-    class Menu
+    public class Menu
     {
         /// <summary>
         /// This method display data. TODO delete. 
         /// </summary>
-        public void DisplayData(Employee empObj)
+        public static void DisplayData(Employee empObj)
         {
             if (empObj.Employer != null && empObj.Subdivision != null)
             {
