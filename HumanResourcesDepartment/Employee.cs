@@ -1,14 +1,25 @@
 ﻿using System;
 
-
 namespace HumanResourcesDepartment
 {
     sealed public class Employee: Person
     {
 
-        private Employee Employer { get; set; }
-        private string Position { get; set; }
-        private Subdivision Subdivision { get; set; }
+        public Employee Employer { get;  set; }
+        public string Position { get; private set; }
+        public Subdivision Subdivision { get; private set; }
+
+        /// <summary>
+        /// Initial constructor
+        /// </summary>
+        /// <param name="FirstName">Firstname of employee. Type: string. </param>
+        /// <param name="LastName">Lastname of employee. Type: string. </param>
+        /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
+        /// <param name="Position">Employye's position. Type: string. </param>
+        public Employee (string FirstName, string LastName, string ContactDetails, string Position) : base(FirstName, LastName, ContactDetails)
+        {            
+            this.Position = Position;
+        }
 
         /// <summary>
         /// Initial constructor
@@ -18,12 +29,40 @@ namespace HumanResourcesDepartment
         /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
         /// <param name="Position">Employye's position. Type: string. </param>
         /// <param name="Employer">Employee's employer. Type: Employee.</param>
-        public Employee (string FirstName, string LastName, string ContactDetails, string Position)
+        public Employee(string FirstName, string LastName, string ContactDetails, string Position, Employee Employer) : base(FirstName, LastName, ContactDetails)
         {
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.ContactDetails = ContactDetails;
             this.Position = Position;
+            this.Employer = Employer;
+        }
+
+        /// <summary>
+        /// Initial constructor
+        /// </summary>
+        /// <param name="FirstName">Firstname of employee. Type: string. </param>
+        /// <param name="LastName">Lastname of employee. Type: string. </param>
+        /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
+        /// <param name="Position">Employye's position. Type: string. </param>
+        /// <param name="Subdiv">Subdivision object</param>
+        public Employee(string FirstName, string LastName, string ContactDetails, string Position, Subdivision Subdiv) : base(FirstName, LastName, ContactDetails)
+        {
+            this.Position = Position;
+            this.Subdivision = Subdiv;
+        }
+
+        /// <summary>
+        /// Initial constructor
+        /// </summary>
+        /// <param name="FirstName">Firstname of employee. Type: string. </param>
+        /// <param name="LastName">Lastname of employee. Type: string. </param>
+        /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
+        /// <param name="Position">Employye's position. Type: string. </param>
+        /// <param name="Employer">Employee's employer. Type: Employee.</param>
+        /// <param name="Subdiv">Subdivision object</param>
+        public Employee(string FirstName, string LastName, string ContactDetails, string Position, Employee Employer, Subdivision Subdiv) : base(FirstName, LastName, ContactDetails)
+        {
+            this.Position = Position;
+            this.Employer = Employer;
+            this.Subdivision = Subdiv;
         }
 
         /// <summary>
@@ -60,7 +99,7 @@ namespace HumanResourcesDepartment
         /// <param name="contactDetails">String with new contact details</param>
         public void ChangeContactDetails(string contactDetails)
         {
-            this.ContactDetails = contactDetails;
+            base.ContactDetails = contactDetails;
         }
 
         /// <summary>
@@ -70,29 +109,6 @@ namespace HumanResourcesDepartment
         public void ChangePosition(string position)
         {
             this.Position = position;
-        }
-
-        /// <summary>
-        /// This method display data. TODO delete. 
-        /// </summary>
-        public void DisplayData()
-        {
-            if(this.Employer != null && this.Subdivision != null)
-            {
-                Console.WriteLine(this.FirstName + "\t" + this.LastName + "\t" + this.Position + "\t" + this.Subdivision.Name + "\t" + this.Employer.FirstName);
-            }
-            else if(this.Employer == null && this.Subdivision != null)
-            {
-                Console.WriteLine(this.FirstName + "\t " + this.LastName + "\t" + this.Position + "\t" + this.Subdivision.Name + "\t" );
-            }
-            else if(this.Subdivision == null && this.Employer != null)
-            {
-                Console.WriteLine(this.FirstName + "\t" + this.LastName + "\t" + this.Position + "\t" + " " + "\t" + this.Employer.FirstName);
-            }
-            else
-            {
-                Console.WriteLine(this.FirstName + "\t" + this.LastName + "\t" + this.Position + "\t" + " " + "\t" + " ");
-            }            
-        }
+        }        
     }   
 }
