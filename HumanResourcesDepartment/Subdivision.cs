@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+
 
 
 namespace HumanResourcesDepartment
 {
-    sealed public class Subdivision
+    [Serializable]
+    public class Subdivision
     {
 
         public string Name { get; set; }
@@ -18,6 +21,7 @@ namespace HumanResourcesDepartment
             this.Name = Name;
             this.Employees = new List<Employee>();
         }
+
         /// <summary>
         /// This method add employee in subdivision. 
         /// </summary>
@@ -35,6 +39,7 @@ namespace HumanResourcesDepartment
         public void RemoveEmployee(Employee emp)
         {
             this.Employees.Remove(emp);
+            emp.RemoveSubdivision();
         }
     }
 }

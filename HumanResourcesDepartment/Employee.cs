@@ -2,9 +2,9 @@
 
 namespace HumanResourcesDepartment
 {
+    [Serializable]
     sealed public class Employee: Person
     {
-
         public Employee Employer { get;  set; }
         public string Position { get; private set; }
         public Subdivision Subdivision { get; private set; }
@@ -12,11 +12,13 @@ namespace HumanResourcesDepartment
         /// <summary>
         /// Initial constructor
         /// </summary>
+        /// <param name="id">Employee's id. Type: int</param>
         /// <param name="FirstName">Firstname of employee. Type: string. </param>
         /// <param name="LastName">Lastname of employee. Type: string. </param>
         /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
         /// <param name="Position">Employye's position. Type: string. </param>
-        public Employee (string FirstName, string LastName, string ContactDetails, string Position) : base(FirstName, LastName, ContactDetails)
+        public Employee (int id, string FirstName, string LastName, string ContactDetails, string Position) : 
+            base(id, FirstName, LastName, ContactDetails)
         {            
             this.Position = Position;
         }
@@ -24,12 +26,14 @@ namespace HumanResourcesDepartment
         /// <summary>
         /// Initial constructor
         /// </summary>
+        /// <param name="id">Employee's id. Type: int</param>
         /// <param name="FirstName">Firstname of employee. Type: string. </param>
         /// <param name="LastName">Lastname of employee. Type: string. </param>
         /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
         /// <param name="Position">Employye's position. Type: string. </param>
         /// <param name="Employer">Employee's employer. Type: Employee.</param>
-        public Employee(string FirstName, string LastName, string ContactDetails, string Position, Employee Employer) : base(FirstName, LastName, ContactDetails)
+        public Employee(int id, string FirstName, string LastName, string ContactDetails, string Position, Employee Employer) : 
+            base(id, FirstName, LastName, ContactDetails)
         {
             this.Position = Position;
             this.Employer = Employer;
@@ -38,12 +42,14 @@ namespace HumanResourcesDepartment
         /// <summary>
         /// Initial constructor
         /// </summary>
+        /// <param name="id">Employee's id. Type: int</param>
         /// <param name="FirstName">Firstname of employee. Type: string. </param>
         /// <param name="LastName">Lastname of employee. Type: string. </param>
         /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
         /// <param name="Position">Employye's position. Type: string. </param>
         /// <param name="Subdiv">Subdivision object</param>
-        public Employee(string FirstName, string LastName, string ContactDetails, string Position, Subdivision Subdiv) : base(FirstName, LastName, ContactDetails)
+        public Employee(int id, string FirstName, string LastName, string ContactDetails, string Position, Subdivision Subdiv) : 
+            base(id, FirstName, LastName, ContactDetails)
         {
             this.Position = Position;
             this.Subdivision = Subdiv;
@@ -52,19 +58,21 @@ namespace HumanResourcesDepartment
         /// <summary>
         /// Initial constructor
         /// </summary>
+        /// <param name="id">Employee's id. Type: int</param>
         /// <param name="FirstName">Firstname of employee. Type: string. </param>
         /// <param name="LastName">Lastname of employee. Type: string. </param>
         /// <param name="ContactDetails">Contact details of employee. Type: string. </param>
         /// <param name="Position">Employye's position. Type: string. </param>
         /// <param name="Employer">Employee's employer. Type: Employee.</param>
         /// <param name="Subdiv">Subdivision object</param>
-        public Employee(string FirstName, string LastName, string ContactDetails, string Position, Employee Employer, Subdivision Subdiv) : base(FirstName, LastName, ContactDetails)
+        public Employee(int id, string FirstName, string LastName, string ContactDetails, string Position, Employee Employer, Subdivision Subdiv) : 
+            base(id, FirstName, LastName, ContactDetails)
         {
             this.Position = Position;
             this.Employer = Employer;
             this.Subdivision = Subdiv;
         }
-
+        
         /// <summary>
         /// This method set subdivision in class employee.
         /// </summary>
@@ -74,6 +82,13 @@ namespace HumanResourcesDepartment
             this.Subdivision = subdivision;
         }
 
+        /// <summary>
+        /// This method removes subdivision.
+        /// </summary>
+        public void RemoveSubdivision()
+        {
+            this.Subdivision = null;
+        }
         /// <summary>
         /// This method sets employer.
         /// </summary>
