@@ -73,7 +73,7 @@ namespace HumanResourcesDepartment
         /// <param name="employee">Employee</param>
         public void AddEmployee(string FirstName, string LastName, string ContactDetails, string Position, string Subdivision, int EmployerId)
         {
-            Employee emp = new Employee(this.id, FirstName, LastName, ContactDetails, Position,  this.FindById(id), this.FindSubdivisionByName(Subdivision));
+            Employee emp = new Employee(this.id, FirstName, LastName, ContactDetails, Position,  this.FindById(EmployerId), this.FindSubdivisionByName(Subdivision));
             this.Employees.Add(emp);
             ++id;
         }
