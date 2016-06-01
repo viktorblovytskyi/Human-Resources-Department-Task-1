@@ -63,7 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeGateway.cs" />
+    <Compile Include="Company.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Subdivision.cs" />
     <Compile Include="Person.cs" />

@@ -71,12 +71,7 @@ namespace HumanResourcesDepartment
             this.Employer = Employer;
             this.Subdivision = Subdiv;
         }
-
-        public int GetId()
-        {
-            return this.id;
-        }
-
+        
         /// <summary>
         /// This method set subdivision in class employee.
         /// </summary>
@@ -86,6 +81,13 @@ namespace HumanResourcesDepartment
             this.Subdivision = subdivision;
         }
 
+        /// <summary>
+        /// This method removes subdivision.
+        /// </summary>
+        public void RemoveSubdivision()
+        {
+            this.Subdivision = null;
+        }
         /// <summary>
         /// This method sets employer.
         /// </summary>

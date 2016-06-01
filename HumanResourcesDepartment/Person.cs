@@ -2,7 +2,7 @@
 {
     public class Person
     {
-        protected int id;
+        public int id { get; protected set; }
         public string FirstName { get; protected set; }
         public string LastName { get; protected set; }
         public string ContactDetails { get; protected set; }
