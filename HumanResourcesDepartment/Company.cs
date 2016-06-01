@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanResourcesDepartment
 {
@@ -51,7 +48,8 @@ namespace HumanResourcesDepartment
         /// <param name="employee">Employee</param>
         public void AddEmployee(string FirstName, string LastName, string ContactDetails, string Position, string Subdivision)
         {
-            Employee emp = new Employee(this.id, FirstName, LastName, ContactDetails, Position, this.FindSubdivisionByName(Subdivision));
+            Employee emp = new Employee(this.id, FirstName, LastName, ContactDetails, Position);
+            this.FindSubdivisionByName(Subdivision).AddEmployee(emp);
             this.Employees.Add(emp);
             ++id;
         }
@@ -73,7 +71,8 @@ namespace HumanResourcesDepartment
         /// <param name="employee">Employee</param>
         public void AddEmployee(string FirstName, string LastName, string ContactDetails, string Position, string Subdivision, int EmployerId)
         {
-            Employee emp = new Employee(this.id, FirstName, LastName, ContactDetails, Position,  this.FindById(EmployerId), this.FindSubdivisionByName(Subdivision));
+            Employee emp = new Employee(this.id, FirstName, LastName, ContactDetails, Position,  this.FindById(EmployerId));
+            this.FindSubdivisionByName(Subdivision).AddEmployee(emp);
             this.Employees.Add(emp);
             ++id;
         }

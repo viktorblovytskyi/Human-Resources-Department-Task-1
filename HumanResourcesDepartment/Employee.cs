@@ -2,6 +2,7 @@
 
 namespace HumanResourcesDepartment
 {
+    [Serializable]
     sealed public class Employee: Person
     {
         public Employee Employer { get;  set; }

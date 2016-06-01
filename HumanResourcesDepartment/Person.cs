@@ -1,5 +1,8 @@
-﻿namespace HumanResourcesDepartment
+﻿using System;
+
+namespace HumanResourcesDepartment
 {
+    [Serializable]
     public class Person
     {
         public int id { get; protected set; }

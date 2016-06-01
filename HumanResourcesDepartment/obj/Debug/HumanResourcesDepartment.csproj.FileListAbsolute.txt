@@ -1,8 +1,7 @@
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\System.Data.SQLite.xml
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\HumanResourcesDepartment.dll.config
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\HumanResourcesDepartment.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\HumanResourcesDepartment.pdb
-E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.dll
-E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.pdb
-E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\HumanResourcesDepartment.dll.config
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\EntityFramework.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\EntityFramework.SqlServer.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\System.Data.SQLite.dll
@@ -10,4 +9,5 @@ E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\Syste
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\System.Data.SQLite.Linq.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\EntityFramework.xml
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\EntityFramework.SqlServer.xml
-E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\System.Data.SQLite.xml
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.pdb

@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+
 
 
 namespace HumanResourcesDepartment
 {
-    sealed public class Subdivision
+    [Serializable]
+    public class Subdivision
     {
 
         public string Name { get; set; }
