@@ -11,3 +11,4 @@ E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\Entit
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Debug\EntityFramework.SqlServer.xml
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.pdb
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Debug\HumanResourcesDepartment.csprojResolveAssemblyReference.cache

@@ -2,3 +2,12 @@ E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\Hum
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\HumanResourcesDepartment.pdb
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Release\HumanResourcesDepartment.dll
 E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\obj\Release\HumanResourcesDepartment.pdb
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\HumanResourcesDepartment.dll.config
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\EntityFramework.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\EntityFramework.SqlServer.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\System.Data.SQLite.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\System.Data.SQLite.EF6.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\System.Data.SQLite.Linq.dll
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\EntityFramework.xml
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\EntityFramework.SqlServer.xml
+E:\Projects\C#\HumanResourcesDepartment\HumanResourcesDepartment\bin\Release\System.Data.SQLite.xml

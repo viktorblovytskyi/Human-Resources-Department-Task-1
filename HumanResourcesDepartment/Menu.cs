@@ -15,8 +15,10 @@ namespace HumanResourcesDepartment
         private void PrintBorder()
         {
             int charCount = 117;
+
             for (int i = 1; i <= charCount; i++)
-                Console.Write("-");            
+                Console.Write("-");  
+                      
             Console.WriteLine();
         }
 
@@ -53,18 +55,16 @@ namespace HumanResourcesDepartment
         }
 
         /// <summary>
-        /// 
+        /// This method displays list of subdivsions
         /// </summary>
-        /// <param name="subdivList"></param>
+        /// <param name="subdivList">List of subdivisions</param>
         public void PrinSubdivisionList(List<Subdivision> subdivList)
         {
             foreach(var subdiv in subdivList)
             {
                 this.PrintBorder();
-                Console.WriteLine("| {0,113} |", subdiv.Name);
-                this.PrintBorder();
+                Console.WriteLine("| Project name: {0,100}|", subdiv.Name);
                 this.PrintEmployeeList(subdiv.Employees);
-                this.PrintBorder();
             }
         }
 
@@ -92,7 +92,11 @@ namespace HumanResourcesDepartment
         {
             BinaryFormatter formatter = new BinaryFormatter();
             using (FileStream fs = new FileStream("people.dat", FileMode.OpenOrCreate))
-                return (Company)formatter.Deserialize(fs);              
+            {
+                Console.WriteLine("Load!!");
+                return (Company)formatter.Deserialize(fs);
+            }
+                              
         }
     }
 }
