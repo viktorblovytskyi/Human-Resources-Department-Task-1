@@ -124,6 +124,6 @@ namespace HumanResourcesDepartment
         public void ChangePosition(string position)
         {
             this.Position = position;
-        }        
+        }           
     }   
 }

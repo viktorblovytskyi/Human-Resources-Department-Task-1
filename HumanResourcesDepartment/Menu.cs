@@ -72,14 +72,14 @@ namespace HumanResourcesDepartment
         /// This method serializes object and stores it in file: company.dll.
         /// </summary>
         /// <param name="company">Company</param>
-        public void SaveObject(Company company, string Name)
+        public void SaveObject(Company company)
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            string file = Name.Trim() + ".dat";
+            string file = company.Name + ".dat";
             using (FileStream fs = new FileStream(file, FileMode.OpenOrCreate))
             {                
                 formatter.Serialize(fs, company);
-                Console.WriteLine("Объект сериализован");
+                Console.WriteLine("Object saved.");
             }
         }
 

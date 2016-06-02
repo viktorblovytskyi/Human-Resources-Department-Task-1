@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace HumanResourcesDepartment
 {
     [Serializable]
-    public class Company
+    sealed public class Company
     {
         public string Name { get; private set; }
         public List<Employee> Employees { get; set; }
@@ -103,7 +103,29 @@ namespace HumanResourcesDepartment
         /// <param name="employee">Employee</param>
         public void RemoveEmloyee (Employee employee)
         {
+            employee.Subdivision.RemoveEmployee(employee);
             this.Employees.Remove(employee);
+
+        }
+
+        /// <summary>
+        /// This method sets employee's subdivision.
+        /// </summary>
+        /// <param name="employeeId">int</param>
+        /// <param name="subdivName">string</param>
+        public void SetSubdivision (int employeeId, string subdivName)
+        {
+            this.FindSubdivisionByName(subdivName).AddEmployee(this.FindById(employeeId));
+        }
+
+        /// <summary>
+        /// This method set employee's employer.
+        /// </summary>
+        /// <param name="employeeId">int</param>
+        /// <param name="employerId">int</param>
+        public void SetEmployer (int employeeId, int employerId)
+        {
+            this.FindById(employeeId).SetEmployer(this.FindById(employerId));
         }
     }
 }
