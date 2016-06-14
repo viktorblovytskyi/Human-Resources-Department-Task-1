@@ -72,10 +72,10 @@ namespace HumanResourcesDepartment
         /// This method serializes object and stores it in file: company.dll.
         /// </summary>
         /// <param name="company">Company</param>
-        public void SaveObject(Company company)
+        public void SaveObject(Company company, string path)
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            string file = company.Name + ".dat";
+            string file = path + @"\" + company.Name.Trim() + ".dat"; ;
             using (FileStream fs = new FileStream(file, FileMode.OpenOrCreate))
             {                
                 formatter.Serialize(fs, company);
@@ -88,9 +88,9 @@ namespace HumanResourcesDepartment
         /// stores it in an object of type Company.
         /// </summary>
         /// <returns>Company</returns>
-        public Company LoadObject(string Name)
+        public Company LoadObject(string Name, string path)
         {
-            string file = Name.Trim() + ".dat";
+            string file = path + @"\" + Name.Trim() + ".dat";
             if (!File.Exists(file))
             {
                 Console.WriteLine("A new company has been created because the file \"{0}\" was not found.", file);
@@ -106,5 +106,6 @@ namespace HumanResourcesDepartment
                 }
             }                            
         }
+
     }
 }
