@@ -9,7 +9,7 @@ namespace HumanResourcesDepartment
         public string Name { get; private set; }
         public List<Employee> Employees { get; set; }
         public List<Subdivision> Subdivisions { get; set; }
-        private int id = 0;
+        private int id = 1;
 
         /// <summary>
         /// Initial constructor
@@ -115,10 +115,10 @@ namespace HumanResourcesDepartment
         public void RemoveSubdivision(string subdivision)
         {
             Subdivision sub = this.FindSubdivisionByName(subdivision);
-            foreach(var emp in sub.Employees)
-            {
-                sub.RemoveEmployee(emp);
-            }
+        
+            foreach(var employee in sub.Employees)
+                employee.RemoveSubdivision();
+
             this.Subdivisions.Remove(sub);
         }
 
