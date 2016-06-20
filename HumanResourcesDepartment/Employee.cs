@@ -104,7 +104,8 @@ namespace HumanResourcesDepartment
         /// <param name="subdivision">New subdivision object</param>
         public void ChangeSubdivision(Subdivision subdivision)
         {
-            this.Subdivision.RemoveEmployee(this);
+            if(this.Subdivision != null)
+                this.Subdivision.RemoveEmployee(this);
             subdivision.AddEmployee(this);
         }
 
