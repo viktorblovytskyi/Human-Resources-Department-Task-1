@@ -124,6 +124,25 @@ namespace HumanResourcesDepartment
         public void ChangePosition(string position)
         {
             this.Position = position;
-        }           
+        }
+
+        /// <summary>
+        /// This method changes all employee's information.  
+        /// </summary>
+        /// <param name="firstName">string</param>
+        /// <param name="lastName">string</param>
+        /// <param name="contactDetails">string</param>
+        /// <param name="position">string</param>
+        /// <param name="subdivision">Subdivision</param>
+        /// <param name="employer">Employee</param>
+        public void ChangeAllData(string firstName, string lastName, string contactDetails, string position, Subdivision subdivision, Employee employer)
+        {
+            base.FirstName = firstName;
+            base.LastName = lastName;
+            base.ContactDetails = contactDetails;
+            this.Position = position;
+            this.Employer = employer;
+            this.ChangeSubdivision(subdivision);
+        }        
     }   
 }
