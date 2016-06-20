@@ -109,6 +109,20 @@ namespace HumanResourcesDepartment
         }
 
         /// <summary>
+        /// This method removes subdivision from list of subdivision.
+        /// </summary>
+        /// <param name="subdivision">string</param>
+        public void RemoveSubdivision(string subdivision)
+        {
+            Subdivision sub = this.FindSubdivisionByName(subdivision);
+            foreach(var emp in sub.Employees)
+            {
+                sub.RemoveEmployee(emp);
+            }
+            this.Subdivisions.Remove(sub);
+        }
+
+        /// <summary>
         /// This method sets employee's subdivision.
         /// </summary>
         /// <param name="employeeId">int</param>
